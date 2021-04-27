@@ -45,7 +45,7 @@ public class Game {
 
         System.out.println("\nYou wake up in a dimly lit corridor. In one direction the passage has collapsed. " +
                 "In the other direction you can see a faint light some way down the corridor." +
-                "\nWhat will you do?\n1) Go back to sleep.\n2) Continue down the corridor.");
+                "\nWhat will you do?\n1) Go back to sleep.\n2) Advance down the corridor.");
         choice = checkInput(choice, 2);
         switch (choice) {
             case 1:
