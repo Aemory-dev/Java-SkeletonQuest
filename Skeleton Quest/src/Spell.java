@@ -34,7 +34,7 @@ public class Spell {
         player.setMana(player.getMana() - this.manaCost);
     }
 
-    //Creating getters and setters
+    // Creating Getters and Setters
     public String getSpellName() {
         return spellName;
     }
