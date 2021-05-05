@@ -1,9 +1,10 @@
 
-// Creating custom exceptions InvalidInput and NotEnoughMana
+// Creating custom exception InvalidInput
 class InvalidInput extends Exception {
     public InvalidInput(String e) {super(e);}
 }
 
+// Creating custom exception NotEnoughMana
 class NotEnoughMana extends Exception {
     public NotEnoughMana(String e) {super(e);}
 }

@@ -16,7 +16,7 @@ public class Game {
         player.learnSpell(fireball);
     }
 
-    // Checks that input is valid
+    // Function that checks if input is valid
     public int checkInput(int choice, int numChoices) {
         int i = 0;
         while (i == 0) {
@@ -37,6 +37,8 @@ public class Game {
         }
         return choice;
     }
+
+    // The following methods represent different levels of the game
 
     public void levelOne() {
         Enemy skeleton1 = new Enemy("Skeleton", player.getLevel());
@@ -144,6 +146,7 @@ public class Game {
         System.out.println("The skeleton king has been defeated and your adventure has concluded.\nYOU WON.");
     }
 
+    // Initializes the player and creates each level as the player reaches it
     public void startGame() {
         this.initializePlayer();
         this.levelOne();

@@ -5,23 +5,27 @@ public class Spell {
     private int manaCost;
     private int power;
 
+    // initializing spell attributes
     public Spell(String spellName, int manaCost, int strength) {
         this.spellName = spellName;
         this.manaCost = manaCost;
         this.power = strength;
     }
 
+    // Casts a damaging spell on the enemy
     public void castHarm(Enemy target, Player player) {
         target.setHealth(target.getHealth() - this.power);
         player.setMana(player.getMana() - this.manaCost);
     }
 
+    // Casts an attack lowering spell on the enemy
     public void castCurse(Enemy target, Player player) {
         target.setAttack(target.getAttack() - this.power);
         player.setMana(player.getMana() - this.manaCost);
         System.out.println("The enemy has been weakened!");
     }
 
+    // Casts a health restoring spell on the player
     public void castHeal(Player player) {
         if (player.getHealth() + this.power > player.getMaxHealth()) {
             player.setHealth(player.getMaxHealth());
@@ -30,6 +34,7 @@ public class Spell {
         player.setMana(player.getMana() - this.manaCost);
     }
 
+    //Creating getters and setters
     public String getSpellName() {
         return spellName;
     }

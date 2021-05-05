@@ -8,6 +8,7 @@ public class Enemy {
     private int attack;
     private int level;
 
+    // Initializing enemy attributes
     public Enemy(String name, int level) {
         this.name = name;
         this.level = level;
@@ -16,10 +17,12 @@ public class Enemy {
         this.health = maxHealth;
     }
 
+    // Enemy attacks the player target
     public void enemyAttack(Player target) {
         target.setHealth(target.getHealth() - this.attack);
     }
 
+    // Creating Getters and Setters
     public String getName() {
         return name;
     }
@@ -60,6 +63,7 @@ public class Enemy {
         this.level = level;
     }
 
+    // Returns a String with enemy name and health/max health
     public String showEnemyHealth() {
         return "The " + this.getName() + " has " + this.getHealth() + "|" + this.getMaxHealth() + " health";
     }
