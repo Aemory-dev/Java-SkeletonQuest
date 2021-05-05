@@ -141,7 +141,8 @@ public class Player {
                 }
                 if (spell.getSpellName().equals("Heal")) { // When "Heal" is used
                     spell.castHeal(this);
-                    System.out.println("You recover some health");
+                    System.out.println("You recover some health. You have " + player.getHealth() + "|"
+                            + player.getMaxHealth() + " health");
                 }
                 else if (spell.getSpellName().equals("Curse of Weakness")) { // When "Curse of Weakness" is used
                     spell.castCurse(target, player);
